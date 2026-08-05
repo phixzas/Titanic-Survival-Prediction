@@ -1,0 +1,24 @@
+<svg width="640" height="360" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="360" fill="#1a2a47"/>
+  <rect x="40" y="220" width="560" height="80" rx="20" fill="#3d5a99"/>
+  <rect x="120" y="150" width="400" height="80" rx="12" fill="#f4d35e"/>
+  <path d="M120 150 L100 200 L540 200 L520 150 Z" fill="#f4d35e"/>
+  <circle cx="160" cy="280" r="20" fill="#fff" opacity="0.8"/>
+  <circle cx="200" cy="280" r="20" fill="#fff" opacity="0.8"/>
+  <circle cx="240" cy="280" r="20" fill="#fff" opacity="0.8"/>
+  <circle cx="280" cy="280" r="20" fill="#fff" opacity="0.8"/>
+  <rect x="320" y="240" width="160" height="40" rx="8" fill="#e63946"/>
+  <g fill="#fff" font-family="Arial, sans-serif" font-weight="600">
+    <text x="80" y="70" font-size="32">Titanic ML Project</text>
+    <text x="80" y="110" font-size="18">Survival analysis • Data prep • Logistic regression</text>
+    <text x="370" y="270" font-size="20">TRAIN</text>
+  </g>
+  <g stroke="#f4d35e" stroke-width="8" stroke-linecap="round">
+    <line x1="120" y1="250" x2="200" y2="200"/>
+    <line x1="200" y1="200" x2="260" y2="220"/>
+    <line x1="260" y1="220" x2="320" y2="170"/>
+    <line x1="320" y1="170" x2="380" y2="190"/>
+    <line x1="380" y1="190" x2="440" y2="160"/>
+  </g>
+  <text x="80" y="325" fill="#d8eefe" font-family="Arial, sans-serif" font-size="14">Data + notebook + model pipeline</text>
+</svg>
