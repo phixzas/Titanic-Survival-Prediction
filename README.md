@@ -1,8 +1,8 @@
 # Titanic Survival Prediction using Machine Learning
 
-## Project Overview
+## 📊 Project Overview
 
-This project predicts whether a passenger survived the Titanic disaster using machine learning. The workflow includes data cleaning, exploratory data analysis (EDA), feature engineering, model training, and model evaluation.
+🚢 Titanic Dataset Analysis: This project predicts whether a passenger survived the Titanic disaster using machine learning. The workflow includes data cleaning, exploratory data analysis (EDA), feature engineering, model training, and model evaluation.
 
 ---
 
@@ -29,6 +29,15 @@ To build a machine learning model that predicts passenger survival based on pass
 - Scikit-learn
 - Jupyter Notebook
 
+
+git clone https://github.com/Amolak001/Titanic-Dataset-Analysis.git
+Install required packages:
+
+pip install -r requirements.txt
+Open the Jupyter Notebook:
+
+jupyter notebook Titanic_Dataset_Analysis.ipynb
+📊 Visualization Preview
 ---
 
 ## Data Preprocessing
@@ -79,4 +88,22 @@ The Logistic Regression model achieved an accuracy of approximately 81%. This pr
 
 ## Author
 
-Olusanjo Mayowa Philips
+Mayowa Philips Olusanjo
+Github: https://github.com/phixzas
+LinkedIn: www.linkedin.com/in/mayowa-philips-olusanjo-982663152
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
