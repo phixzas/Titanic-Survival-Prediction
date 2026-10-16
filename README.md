@@ -1,109 +1,71 @@
-# Titanic Survival Prediction using Machine Learning
+# 🚢 Titanic Survival Prediction
 
-## 📊 Project Overview
+> An end-to-end Machine Learning project that predicts passenger survival on the Titanic with 80%+ accuracy, deployed as an interactive Streamlit web app.
 
-🚢 Titanic Dataset Analysis: This project predicts whether a passenger survived the Titanic disaster using machine learning. The workflow includes data cleaning, exploratory data analysis (EDA), feature engineering, model training, and model evaluation.
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://python.org)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.35-red)](https://streamlit.io)
+[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.4-orange)](https://scikit-learn.org)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://titanic-survival-prediction-67loo6y5ezc7uxgsgnyfmx.streamlit.app/)
 
----
-
-## Objective
-
-To build a machine learning model that predicts passenger survival based on passenger information such as age, sex, passenger class, and fare.
-
----
-
-## Dataset
-
-- Source: Kaggle Titanic Dataset
-- Total Rows: 891
-- Total Columns: 12
+### 🔗 Live Demo
+**[https://titanic-survival-prediction-67loo6y5ezc7uxgsgnyfmx.streamlit.app/](https://titanic-survival-prediction-67loo6y5ezc7uxgsgnyfmx.streamlit.app/)**
 
 ---
 
-## Technologies Used
+### 📌 Overview
+The sinking of the Titanic is one of history's most infamous tragedies. While luck played a role, certain groups were statistically more likely to survive. This project answers: **"What sorts of people were more likely to survive?"**
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Scikit-learn
-- Jupyter Notebook
+I built a complete ML pipeline: from EDA and feature engineering to model training and deployment.
 
+### 🎯 Problem Statement
+Binary Classification: Predict `Survived` (0 = No, 1 = Yes) based on passenger attributes like Pclass, Sex, Age, Fare, etc.
 
-git clone https://github.com/Amolak001/Titanic-Dataset-Analysis.git
-Install required packages:
+### 📊 Dataset
+- **Source:** Kaggle Titanic Competition
+- **Rows:** 891 (train), 418 (test)
+- **Features:** 12 columns including Pclass, Sex, Age, SibSp, Parch, Fare, Embarked, Cabin
+- **Target:** Survived
 
+### 🔍 Key EDA Insights
+- **Sex was #1 predictor:** Female survival rate ~74% vs Male ~19%
+- **Class matters:** 1st Class ~63% survival vs 3rd Class ~24%
+- **Age:** Children <10 had highest survival rate
+- **Fare:** Higher fare correlated with higher survival
+- **Embarked:** Port C had slightly higher survival
+
+### 🛠️ Workflow
+
+#### 1. Data Preprocessing
+- Filled missing `Age` with median (grouped by Title/Pclass for better accuracy)
+- Filled missing `Embarked` with mode
+- Dropped `Cabin` (77% missing) but engineered `Deck` feature from it
+- Created `Title` from Name (Mr, Mrs, Miss, Master, Rare)
+- Created `FamilySize = SibSp + Parch + 1` and `IsAlone`
+
+#### 2. Feature Engineering
+- Label Encoding: Sex
+- One-Hot Encoding: Embarked, Title, Pclass
+- Feature Scaling: StandardScaler for Age, Fare
+- Train/Test Split: 80/20 with stratification
+
+#### 3. Modeling
+**Algorithm: Logistic Regression**
+Why? Interpretable, handles binary classification well, and performed best after GridSearchCV tuning.
+
+Other models tested: Random Forest, Decision Tree, KNN
+
+Final model: **~82% accuracy on test set** with 5-fold CV.
+
+### 📁 Project Structure
+
+### 🚀 Run Locally
+```bash
+# 1. Clone
+git clone https://github.com/phixzas/Titanic-Survival-Prediction.git
+cd Titanic-Survival-Prediction
+
+# 2. Install
 pip install -r requirements.txt
-Open the Jupyter Notebook:
 
-jupyter notebook Titanic_Dataset_Analysis.ipynb
-📊 Visualization Preview
----
-
-## Data Preprocessing
-
-- Filled missing Age values using the median
-- Filled missing Embarked values using the mode
-- Dropped the Cabin column because of many missing values
-- Encoded categorical variables
-- Split the data into training and testing datasets
-
----
-
-## Exploratory Data Analysis
-
-Key findings include:
-
-- Female passengers had a higher survival rate than male passengers.
-- First-class passengers survived more frequently than third-class passengers.
-- Children had the highest survival rate.
-- Passenger class had a significant impact on survival.
-
----
-
-## Machine Learning Model
-
-Algorithm used:
-
-- Logistic Regression
-
----
-
-## Model Performance
-
-| Metric | Score |
-|---------|------:|
-| Accuracy | 81% |
-| Precision | 79% |
-| Recall | 74% |
-| F1 Score | 76% |
-
----
-
-## Conclusion
-
-The Logistic Regression model achieved an accuracy of approximately 81%. This project demonstrates the complete machine learning workflow, from data preprocessing and exploratory data analysis to model training and evaluation.
-
----
-
-## Author
-
-Mayowa Philips Olusanjo
-Github: https://github.com/phixzas
-LinkedIn: www.linkedin.com/in/mayowa-philips-olusanjo-982663152
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# 3. Run Streamlit app
+streamlit run app.py
