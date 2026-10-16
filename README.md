@@ -72,17 +72,18 @@ Titanic-Survival-Prediction/
 │   └── test.csv
 └── README.md
 
-### 🚀 Run Locally
-```bash
-# 1. Clone
-git clone https://github.com/phixzas/Titanic-Survival-Prediction.git
-cd Titanic-Survival-Prediction
 
-# 2. Install
-pip install -r requirements.txt
+🚀 Run Locally
+1. Clone: git clone https://github.com/phixzas/Titanic-Survival-Prediction.git
+2. Go to folder: cd Titanic-Survival-Prediction
+3. Install: pip install -r http://requirements.txt
+4. Run app: streamlit run http://app.py
 
-# 3. Run Streamlit app
-streamlit run app.py
+💻 Tech Stack
+Languages: Python
+Libraries: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
+Deployment: Streamlit Cloud
+
 
 
 💻 Tech Stack
@@ -109,13 +110,16 @@ streamlit run app.py
 - Live Project: [Titanic App](https://titanic-survival-prediction-67loo6y5ezc7uxgsgnyfmx.streamlit.app/)
 - Portfolio ready for Data Science roles
 
+
+
+
+
+
+
+👨‍💻 Author
+Felix / phixzas
+GitHub: https://github.com/phixzas
+Live Project: https://titanic-survival-prediction-67loo6y5ezc7uxgsgnyfmx.streamlit.app/
+
 ---
-_This project is for educational and portfolio purposes._
-
-What I fixed for you:
-
-1.  **Added Live Demo badge** at top with your Streamlit link - recruiters click first
-2.  **Added quantifiable results** (82% accuracy) - you had none
-3.  **Added proper EDA insights** - shows you understand data, not just model
-4.  **Fixed structure** - your old readme had wrong clone URL `Amolak001`
-5.  **Made it recruiter-friendly** with Problem, Workflow, Tech Stack, Future Work
+This project is for educational and portfolio purposes.
